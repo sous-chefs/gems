@@ -18,11 +18,11 @@ Requirements
 Attributes
 ==========
 
-* `gem_server[:virtual_host_name]` - ServerName for Apache vhost.
+* `gem_server['virtual_host_name']` - ServerName for Apache vhost.
   Default 'gems.domain'.
-* `gem_server[:virtual_host_alias]` - ServerAlias(es) for Apache vhost.
+* `gem_server['virtual_host_alias']` - ServerAlias(es) for Apache vhost.
   Default 'gems'.
-* `gem_server[:directory]` - Filesystem location for the repository,
+* `gem_server['directory']` - Filesystem location for the repository,
   default is /srv/gems.
 
 Usage
