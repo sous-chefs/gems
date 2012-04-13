@@ -3,7 +3,7 @@ maintainer_email  "cookbooks@opscode.com"
 license           "Apache 2.0"
 description       "Sets up a local gem server repository or mirror"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "1.0.0"
+version           "1.0.1"
 recipe            "gems", "Empty, use one of the other recipes"
 recipe            "gems::server", "Sets up a local gem server repository"
 recipe            "gems::mirror", "Crons an rsync of rubyforge"
