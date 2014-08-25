@@ -16,3 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# install rubygems-mirror gem
+gem_package "rubygems-mirror" do
+  action :install
+end

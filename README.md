@@ -24,6 +24,13 @@ Attributes
   Default 'gems'.
 * `gem_server[:directory]` - Filesystem location for the repository,
   default is /srv/gems.
+* `gem_server[:mirror_cron_command'] - cron command to be executed to
+  download/updated mirror
+* `gem_server[:mirror_cron_expression'] - cron expression to execute
+  gem_server[:mirror_cron_command'] 
+* `gem_server['mirrorrc_contents'] - Settings for rubygems-mirror gem as per
+  https://github.com/rubygems/rubygems-mirror
+
 
 Usage
 =====
