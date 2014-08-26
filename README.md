@@ -54,6 +54,7 @@ License and Author
 ==================
 
 Author:: Joshua Timberman <joshua@opscode.com>
+Author:: Pushkar Raste <praste@bloomberg.net, pushkar.raste@gmail.com>
 
 Copyright:: 2009, Opscode, Inc
 
