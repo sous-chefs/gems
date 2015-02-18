@@ -46,9 +46,9 @@ Use the gems::mirror recipe to mirror RubyForge. This will take a long time beca
 License and Author
 ==================
 
-Author:: Joshua Timberman <joshua@opscode.com>
+Author:: Joshua Timberman <joshua@chef.io>
 
-Copyright:: 2009, Opscode, Inc
+Copyright:: 2009, Chef Software, Inc
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
