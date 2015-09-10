@@ -17,40 +17,40 @@
 # limitations under the License.
 #
 
-include_recipe "apache2"
+include_recipe 'apache2'
 
-gem_package "builder" do
+gem_package 'builder' do
   action :install
 end
 
 template "#{node['apache']['dir']}/sites-available/gem_server.conf" do
-  source "gem_server.conf.erb"
+  source 'gem_server.conf.erb'
   variables(
-    :virtual_host_name => node['gem_server']['virtual_host_name'],
-    :virtual_host_alias => node['gem_server']['virtual_host_alias'],
-    :gem_directory => node['gem_server']['directory']
+    virtual_host_name: node['gem_server']['virtual_host_name'],
+    virtual_host_alias: node['gem_server']['virtual_host_alias'],
+    gem_directory: node['gem_server']['directory']
   )
-  owner "root"
+  owner 'root'
   mode 0755
 end
 
-apache_site "gem_server.conf"
+apache_site 'gem_server.conf'
 
-execute "index-gem-repository" do
+execute 'index-gem-repository' do
   command "gem generate_index -d #{node['gem_server']['directory']}"
   action :nothing
 end
 
 directory node['gem_server']['directory'] do
-  owner "root"
-  group "root"
+  owner 'root'
+  group 'root'
   mode 0755
 end
 
 remote_directory "#{node['gem_server']['directory']}/gems" do
-  source "packages"
-  owner "root"
-  group "root"
-  mode "755"
-  notifies :run, "execute[index-gem-arepository]"
+  source 'packages'
+  owner 'root'
+  group 'root'
+  mode '755'
+  notifies :run, 'execute[index-gem-arepository]'
 end
