@@ -15,6 +15,10 @@ depends           "rsync"
   supports os
 end
 
+
+source_url 'https://github.com/chef-cookbooks/gems' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/gems/issues' if respond_to?(:issues_url)
+
 attribute "gem_server",
   :display_name => "Gem Server",
   :description => "Hash of Gem Server attributes",
