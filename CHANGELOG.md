@@ -2,7 +2,7 @@ gems Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the gems cookbook.
 
-v1.0.0 (2015-10-20)
+v1.0.1 (2015-10-20)
 -------------------
 * Converted readme to MD for rendering on the Supermarket
 * Added source_url and issues_url to the metadata
