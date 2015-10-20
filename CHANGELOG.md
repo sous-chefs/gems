@@ -2,6 +2,12 @@ gems Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the gems cookbook.
 
+v1.0.2 (2015-10-20)
+-------------------
+* Fix a typo in a notification that prevented the cookbook from compling
+* Updated the supported Ubuntu released in the readme
+* Update test kitchen config to test the server install
+
 v1.0.1 (2015-10-20)
 -------------------
 * Converted readme to MD for rendering on the Supermarket
