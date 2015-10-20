@@ -11,7 +11,7 @@ Requirements
 
 ## Platform:
 
-* Ubuntu 9.04, 8.10
+* Ubuntu / Debian
 
 ## Cookbooks:
 
