@@ -52,5 +52,5 @@ remote_directory "#{node['gem_server']['directory']}/gems" do
   owner 'root'
   group 'root'
   mode '755'
-  notifies :run, 'execute[index-gem-arepository]'
+  notifies :run, 'execute[index-gem-repository]'
 end
