@@ -15,26 +15,7 @@ depends           'rsync'
   supports os
 end
 
-source_url 'https://github.com/chef-cookbooks/gems' if respond_to?(:source_url)
-issues_url 'https://github.com/chef-cookbooks/gems/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/chef-cookbooks/gems'
+issues_url 'https://github.com/chef-cookbooks/gems/issues'
 
-attribute 'gem_server',
-  display_name: 'Gem Server',
-  description: 'Hash of Gem Server attributes',
-  type: 'hash'
-
-attribute 'gem_server/virtual_host_name',
-  display_name: 'Gem Server Virtual Hostname',
-  description: 'Apache ServerName for the virtual host',
-  default: 'gems.domain'
-
-attribute 'gem_server/virtual_host_alias',
-  display_name: 'Gem Server Virtual Host Aliases',
-  description: "Array of Apache ServerAlias'es",
-  type: 'array',
-  default: 'gems'
-
-attribute 'gem_server/directory',
-  display_name: 'Gem Server Directory',
-  description: 'Filesystem location of where the gems repository is served from',
-  default: '/srv/gems'
+chef_version '>= 12.1'

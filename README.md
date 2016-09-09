@@ -1,55 +1,54 @@
-gems Cookbook
-=============
+# gems Cookbook
 
-[![Build Status](https://travis-ci.org/chef-cookbooks/gems.svg?branch=master)](http://travis-ci.org/chef-cookbooks/gems)
-[![Cookbook Version](https://img.shields.io/cookbook/v/gems.svg)](https://supermarket.chef.io/cookbooks/gems)
+[![Build Status](https://travis-ci.org/chef-cookbooks/gems.svg?branch=master)](http://travis-ci.org/chef-cookbooks/gems) [![Cookbook Version](https://img.shields.io/cookbook/v/gems.svg)](https://supermarket.chef.io/cookbooks/gems)
 
 Sets up a local gem server repository.
 
-Requirements
-============
+## Requirements
 
-## Platform:
+### Platform:
 
-* Ubuntu / Debian
+- Ubuntu / Debian
 
-## Cookbooks:
+### Cookbooks:
 
-* apache2
-* rsync
+- apache2
+- rsync
 
-Attributes
-==========
+### Chef
 
-* `gem_server['virtual_host_name']` - ServerName for Apache vhost.
-  Default 'gems.domain'.
-* `gem_server['virtual_host_alias']` - ServerAlias(es) for Apache vhost.
-  Default 'gems'.
-* `gem_server['directory']` - Filesystem location for the repository,
-  default is /srv/gems.
+- Chef 12.1+
 
-Usage
-=====
+## Attributes
+
+- `gem_server['virtual_host_name']` - ServerName for Apache vhost. Default 'gems.domain'.
+- `gem_server['virtual_host_alias']` - ServerAlias(es) for Apache vhost. Default 'gems'.
+- `gem_server['directory']` - Filesystem location for the repository, default is /srv/gems.
+
+## Usage
 
 Create files/default/packages, and copy gems to that directory.
 
 Specify the gem source on clients via the command line, for example:
 
-    sudo gem source -a http://gems
-    sudo gem install rails --source http://gems
+```shell
+sudo gem source -a http://gems
+sudo gem install rails --source http://gems
+```
 
 Or use the source with gem_package resources in your chef recipes.
 
-    gem_package "rails" do
-      source "http://gems"
-    end
+```ruby
+gem_package "rails" do
+  source "http://gems"
+end
+```
 
 Use the gems::mirror recipe to mirror RubyForge. This will take a long time because the repository is 28k+ gems and over 5.5G. It will also override the remote_directory resource to not notify gem generate_index, and instead handle that in the cron job that does the rsync.
 
-License and Author
-==================
+## License & Authors
 
-Author:: Joshua Timberman <joshua@chef.io>
+Author:: Joshua Timberman [joshua@chef.io](mailto:joshua@chef.io)
 
 ```text
 Copyright:: 2009-2015, Chef Software, Inc
