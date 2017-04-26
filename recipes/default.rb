@@ -2,7 +2,7 @@
 # Cookbook Name:: gems
 # Recipe:: default
 #
-# Copyright 2009-2016, Chef Software, Inc.
+# Copyright 2009-2017, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,3 +16,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+Chef::Log.warn('The gems::default recipe contains no Chef resources and should not be applied to a node')
