@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## 2.0.2 (2017-04-26)
+
+- Add a warning when applying the empty gems default recipe
+- Chef 13 attribute fix
+
 ## 2.0.1 (2017-04-26)
 
 - Convert Travis integration testing to kitchen-dokken
