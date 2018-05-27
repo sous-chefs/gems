@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## 2.0.3 (2018-05-26)
+
+- Properly mock out the distro in the ChefSpec
+- Add a test cookbook to update apt / install ruby
+- Use full file modes on directories
+- Update the platforms we test on to include new Debian/Ubuntu releases
+
 ## 2.0.2 (2017-04-26)
 
 - Add a warning when applying the empty gems default recipe
