@@ -2,7 +2,7 @@
 # Cookbook:: gems
 # Recipe:: server
 #
-# Copyright:: 2009-2016, Chef Software, Inc.
+# Copyright:: 2009-2018, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ template "#{node['apache']['dir']}/sites-available/gem_server.conf" do
     gem_directory: node['gem_server']['directory']
   )
   owner 'root'
-  mode '755'
+  mode '0755'
 end
 
 apache_site 'gem_server.conf'
@@ -44,13 +44,13 @@ end
 directory node['gem_server']['directory'] do
   owner 'root'
   group 'root'
-  mode '755'
+  mode '0755'
 end
 
 remote_directory "#{node['gem_server']['directory']}/gems" do
   source 'packages'
   owner 'root'
   group 'root'
-  mode '755'
+  mode '0755'
   notifies :run, 'execute[index-gem-repository]'
 end
