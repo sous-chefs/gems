@@ -8,10 +8,9 @@ version           '2.0.3'
 depends           'apache2'
 depends           'rsync'
 
-%w( ubuntu debian ).each do |os|
-  supports os
-end
+supports 'ubuntu'
+supports 'debian'
 
 source_url 'https://github.com/chef-cookbooks/gems'
 issues_url 'https://github.com/chef-cookbooks/gems/issues'
-chef_version '>= 12.1' if respond_to?(:chef_version)
+chef_version '>= 12.1'
