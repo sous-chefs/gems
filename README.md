@@ -6,18 +6,18 @@ Sets up a local gem server repository.
 
 ## Requirements
 
-### Platform:
+### Platform
 
 - Ubuntu / Debian
 
-### Cookbooks:
+### Cookbooks
 
 - apache2
 - rsync
 
 ### Chef
 
-- Chef 12.1+
+- Chef 12.15+
 
 ## Attributes
 
