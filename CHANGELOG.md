@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## Unreleased
+
+- resolved cookstyle error: metadata.rb:11:1 refactor: `ChefStyle/OverlyComplexSupportsDependsMetadata`
+- resolved cookstyle error: metadata.rb:17:1 refactor: `ChefModernize/RespondToInMetadata`
+
 ## 2.0.3 (2018-05-26)
 
 - Properly mock out the distro in the ChefSpec
