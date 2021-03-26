@@ -1,0 +1,7 @@
+---
+name: gems
+title: Integration tests for the gems Cookbook
+version: 0.1.0
+supports:
+  - os-family: linux
+  - os-family: amazon

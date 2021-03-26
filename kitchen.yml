@@ -7,6 +7,11 @@ provisioner:
   deprecations_as_errors: true
   chef_license: accept-no-persist
 
+verifier:
+  name: inspec
+  inspec_tests:
+    - path: test/integration/inspec
+
 platforms:
   - name: amazonlinux-2
   - name: centos-7
@@ -21,3 +26,6 @@ suites:
   - name: default
     run_list:
       - recipe[test::default]
+    verifier:
+      controls:
+        - default

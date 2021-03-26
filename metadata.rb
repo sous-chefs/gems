@@ -13,6 +13,6 @@ depends           'rsync'
 
 supports 'amazon'
 supports 'centos'
+supports 'debian'
 supports 'fedora'
 supports 'ubuntu'
-supports 'debian'
