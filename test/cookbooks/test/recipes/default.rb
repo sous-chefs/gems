@@ -1,6 +1,6 @@
 package 'ruby'
 
-node.default['gem_server']['virtual_host_name']  = "gems.test"
+node.default['gem_server']['virtual_host_name'] = 'gems.test'
 
 include_recipe 'gems::server'
 
