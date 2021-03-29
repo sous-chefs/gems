@@ -46,8 +46,8 @@ jobs:
           - 'debian-9'
           - 'debian-10'
           - 'fedora-latest'
-          - 'ubuntu-18.04'
-          - 'ubuntu-20.04'
+          - 'ubuntu-1804'
+          - 'ubuntu-2004'
         suite:
           - 'default'
       fail-fast: false
