@@ -5,6 +5,8 @@ This file is used to list changes made in each version of the gems cookbook.
 ## Unreleased
 
 - Sous Chefs Adoption
+- Add InSpec tests
+- Remove mirror recipe bc it is outdated
 - resolved cookstyle error: metadata.rb:11:1 refactor: `ChefStyle/OverlyComplexSupportsDependsMetadata`
 - resolved cookstyle error: metadata.rb:17:1 refactor: `ChefModernize/RespondToInMetadata`
 
