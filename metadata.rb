@@ -3,7 +3,7 @@ maintainer        'Chef Software, Inc.'
 maintainer_email  'cookbooks@chef.io'
 license           'Apache-2.0'
 description       'Sets up a local gem server repository or mirror'
-version           '2.0.3'
+version           '2.0.4'
 
 depends           'apache2'
 depends           'rsync'
