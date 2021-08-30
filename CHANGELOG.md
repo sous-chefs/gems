@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the gems cookbook.
 
 ## Unreleased
 
+- Standardise files with files in sous-chefs/repo-management
+
 ## 2.0.4 - *2021-06-01*
 
 - resolved cookstyle error: metadata.rb:11:1 refactor: `ChefStyle/OverlyComplexSupportsDependsMetadata`
