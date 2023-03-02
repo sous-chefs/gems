@@ -5,6 +5,7 @@ This file is used to list changes made in each version of the gems cookbook.
 ## Unreleased
 
 - Remove delivery folder
+- Standardise files with files in sous-chefs/repo-management
 
 ## 2.0.5 - *2021-08-31*
 
@@ -31,11 +32,12 @@ This file is used to list changes made in each version of the gems cookbook.
 
 - Convert Travis integration testing to kitchen-dokken
 - Improve Chefspec output
-- Fix file modes to be strings 
+- Fix file modes to be strings
 - Test with Local Delivery and not Rake
 - Move templates out of the default directory since only Chef < 12 requires this
 
 ## 2.0.0 (2016-09-16)
+
 - Testing updates
 - Require Chef 12.1
 
