@@ -1,15 +1,25 @@
 ---
-name: kitchen
+name: ci
 
-on:
+"on":
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
+  lint-unit:
+    uses: sous-chefs/.github/.github/workflows/lint-unit.yml@2.0.1
+    permissions:
+      actions: write
+      checks: write
+      pull-requests: write
+      statuses: write
+      issues: write
+
   dokken:
     runs-on: ubuntu-latest
+    needs: lint-unit
     strategy:
       matrix:
         os:
