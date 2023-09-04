@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: Check out cookbook code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Chef Infra Client
         uses: actionshub/chef-install@master
       - name: Dokken
