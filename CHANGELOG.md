@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
-## Unreleased
+## 2.0.14 - *2024-05-03*
 
 ## 2.0.13 - *2023-12-21*
 
