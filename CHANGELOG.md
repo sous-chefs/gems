@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## Unreleased
+
 ## 2.0.16 - *2025-09-04*
 
 ## 2.0.15 - *2024-05-03*
