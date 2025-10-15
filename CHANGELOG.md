@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## [2.0.17](https://github.com/sous-chefs/gems/compare/2.0.16...v2.0.17) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#40](https://github.com/sous-chefs/gems/issues/40)) ([484a56d](https://github.com/sous-chefs/gems/commit/484a56d3f8285112ee3dc568fc2e42a114b3b068))
+
 ## 2.0.6 - *2023-03-02*
 
 * Remove delivery folder
