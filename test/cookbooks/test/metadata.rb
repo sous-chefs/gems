@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 name 'test'
-maintainer 'Chef Software, Inc.'
-maintainer_email 'cookbooks@chef.io'
+maintainer 'Sous Chefs'
+maintainer_email 'help@sous-chefs.org'
 license 'Apache-2.0'
 version '1.0.0'
 

@@ -1,0 +1,7 @@
+---
+name: default
+title: gems default integration tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies the gems_server resource
+version: 1.0.0
