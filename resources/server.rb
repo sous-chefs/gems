@@ -5,7 +5,7 @@ unified_mode true
 
 property :server_name, String, name_property: true
 property :server_aliases, [String, Array], default: 'gems',
-                                      coerce: proc { |aliases| aliases.is_a?(Array) ? aliases : Array(aliases) }
+                                           coerce: proc { |aliases| aliases.is_a?(Array) ? aliases : Array(aliases) }
 property :server_admin, String, default: 'root@localhost'
 property :directory, String, default: '/srv/gems'
 property :ruby_package, [String, Array], default: 'ruby'
