@@ -1,5 +1,6 @@
-apt_update
+# frozen_string_literal: true
 
-package 'ruby'
-
-include_recipe 'gems::server'
+gems_server 'gems.local' do
+  server_aliases 'gems'
+  packages_cookbook 'test'
+end

@@ -1,33 +1,41 @@
 # gems Cookbook
 
-[![Build Status](https://travis-ci.org/chef-cookbooks/gems.svg?branch=master)](http://travis-ci.org/chef-cookbooks/gems) [![Cookbook Version](https://img.shields.io/cookbook/v/gems.svg)](https://supermarket.chef.io/cookbooks/gems)
+[![Cookbook Version](https://img.shields.io/cookbook/v/gems.svg)](https://supermarket.chef.io/cookbooks/gems)
 
-Sets up a local gem server repository.
+Provides custom resources for local RubyGems repositories and mirrors.
 
 ## Requirements
 
 ### Platform
 
-- Ubuntu / Debian
+* Debian 12+
+* Ubuntu 22.04+
 
 ### Cookbooks
 
-- apache2
-- rsync
+* apache2
+* rsync
 
 ### Chef
 
-- Chef 12.15+
+* Chef 15.3+
 
-## Attributes
+## Resources
 
-- `gem_server['virtual_host_name']` - ServerName for Apache vhost. Default 'gems.domain'.
-- `gem_server['virtual_host_alias']` - ServerAlias(es) for Apache vhost. Default 'gems'.
-- `gem_server['directory']` - Filesystem location for the repository, default is /srv/gems.
+* [gems_server](documentation/gems_server.md)
+* [gems_mirror](documentation/gems_mirror.md)
 
 ## Usage
 
-Create files/default/packages, and copy gems to that directory.
+Declare `gems_server` in a wrapper cookbook recipe. If the wrapper cookbook stores gem packages in
+`files/default/packages`, pass that cookbook name with `packages_cookbook`.
+
+```ruby
+gems_server 'gems.example.com' do
+  server_aliases 'gems'
+  packages_cookbook 'my_wrapper'
+end
+```
 
 Specify the gem source on clients via the command line, for example:
 
@@ -44,7 +52,18 @@ gem_package "rails" do
 end
 ```
 
-Use the gems::mirror recipe to mirror RubyForge. This will take a long time because the repository is 28k+ gems and over 5.5G. It will also override the remote_directory resource to not notify gem generate_index, and instead handle that in the cron job that does the rsync.
+Use `gems_mirror` to configure an rsync-based mirror job:
+
+```ruby
+gems_mirror 'mirror.example.com' do
+  source_url 'rsync://mirror.example.com/gems/'
+end
+```
+
+## Migration
+
+This cookbook no longer provides recipes or node attributes. See [migration.md](migration.md) for
+the breaking API changes and replacement resource examples.
 
 ## License & Authors
 
