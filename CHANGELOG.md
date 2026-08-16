@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the gems cookbook.
 
+## [3.0.0](https://github.com/sous-chefs/gems/compare/v2.0.17...v3.0.0) (2026-08-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate gems to custom resources ([#44](https://github.com/sous-chefs/gems/issues/44))
+
+### Features
+
+* migrate gems to custom resources ([#44](https://github.com/sous-chefs/gems/issues/44)) ([5dd4720](https://github.com/sous-chefs/gems/commit/5dd4720747ab1289e60e74c01d3c2dc36e19975d))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#40](https://github.com/sous-chefs/gems/issues/40)) ([484a56d](https://github.com/sous-chefs/gems/commit/484a56d3f8285112ee3dc568fc2e42a114b3b068))
+
 ## [2.0.17](https://github.com/sous-chefs/gems/compare/2.0.16...v2.0.17) (2025-10-15)
 
 
